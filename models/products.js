@@ -13,6 +13,22 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    productPrice:{
+        type: Number,
+        required: true
+    },
+    productImage:{
+        type: String,
+        required: true
+    },
+    productQuantity:{
+        type: Number,
+        required: true
+    },
+    productStatus:{
+        type: String,
+        required: true
+    },
     cretedOn:{
         type: Date, 
         default: Date.now
