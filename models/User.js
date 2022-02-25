@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 
 
 const UserSchema = new mongoose.Schema({
-    name: {
+    firstName: {
+        type = String,
+        required = true
+    },
+    lastName: {
         type = String,
         required = true
     },
@@ -86,7 +90,8 @@ module.exports.getUserByUsername = (username, callback) => {
 module.exports.updateUser = (id, user, options, callback) => {
     var query = {_id: id};
     var update = {
-        name: user.name,
+        firstName: user.firstName,
+        lastName: user.lastName,
         username: user.username,
         email: user.email,
         password: user.password,
