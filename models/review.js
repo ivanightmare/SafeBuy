@@ -10,3 +10,6 @@ const reviewSchema = new mongoose.Schema({
     },
     user: String,
 });
+
+const Review = mongoose.model('review', reviewSchema);
+module.exports = Review;
